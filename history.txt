@@ -1,0 +1,20 @@
+ls -a
+ls
+ls -l test
+exit
+ls -l
+ls -a
+ls -la
+echo       hooo
+echo "heoovos bjsks   "     kshfdk   "hsf   "
+gedit
+gedit
+pinfo
+gedit&
+pinfo 44222
+gedit &
+pinfo 44263
+pinfo 44222
+search history.txt
+search dample
+history 3
