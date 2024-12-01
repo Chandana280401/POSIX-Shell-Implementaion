@@ -13,38 +13,47 @@ vector<string> split_into_args()-->splits the input command into arguments on de
 vector<string> split_cmnd(string cmnd)-->If the input given has more than one commands seperated by ";", this command splits them into individual commands using strtok().
 
 strtok()-->used to convert the string to tokens based on the seperation delimeter provided.
+
 -------------------------------------------------------------------------------------------------------------
 cd.cpp
 
 ->For the argument after the cd, each case is being handled seperately.
 ->Whenever there is a change in directory, also updating the display of the terminal.
+
 -------------------------------------------------------------------------------------------------------------
 
 pwd.cpp, echo.cpp
 
 ->In pwd.cpp , we use getcwd() to get the current working directory of out code.
 ->Custom module for echo command, which ignores spaces within the quotes and trims away extra spaces.
+
 -------------------------------------------------------------------------------------------------------------
 
 ls.cpp
 
 ->Have handles in the format of ls command, except that it doesn't print total value
 -> Both the flags -l, -a are handled, and also handled for multiple direcotries and multiple flags
+
 -------------------------------------------------------------------------------------------------------------
 search.cpp
 
 ->It searches for a file or folder recursively within the current directory.
 ->It first finds the directory name in which it is present and reads each entry to compare it with file / folder name which need to found.
--------------------------------------------------------------------------------------------------------------redirection.cpp
+
+-------------------------------------------------------------------------------------------------------------
+redirection.cpp
 
 -> I'm checking whether the current cmnd contains both "<" and ">", so then io_redirect() gets invoked
 -> else if it's only one operator either "<" or ">" , then the respective function gets called.
+
 -------------------------------------------------------------------------------------------------------------
+
 pipeline.cpp
 
 -> all the line input is divided based on '|' and then each command is executed using execvp() and every adjacent commands are interlinked using pipes.
 pipefd[0]-->allows to read input
 pipefd[1]-->allows to write output
+
 ------------------------------------------------------------------------------------------------------------
 history.cpp
 
@@ -55,10 +64,12 @@ background.cpp
 
 -->if the command contains & at the end , it is treated as background process and identified using a flag called background.
 -->When the process is background, it prints the pid on screen
+
 ------------------------------------------------------------------------------------------------------------
 pinfo.cpp
 
 ->it gives the process id, status, and execution path of given process id using stat system call.
+
 ------------------------------------------------------------------------------------------------------------
 signals
 
